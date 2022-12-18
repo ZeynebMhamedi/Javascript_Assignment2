@@ -194,7 +194,7 @@ class GameManager {
 
 		
 		if(gamesArr.length === 0) {
-			container.innerHTML = "<p>No games to display!</p>";
+			container.innerHTML = "<p>Aucun jeu à afficher!</p>";
 			return;
 		}  
   
