@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>A game manager</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js"></script>
+</head>
+
+<body> 
+	<form onsubmit="return formSubmitted();">
+	 <fieldset>
+        <h1>Top des meilleurs jeux vidéo de 2022 !</h1>
+
+		<label>
+			Nom Jeu : 
+			<input type="text" id="name_game" required>
+		</label>
+
+		<label>
+			Disponible sur : 
+			<input type="text" id="disponible_sur" required>
+		</label>
+
+        <label>
+			Editeur : 
+			<input type="text" id="editeur" required>
+		</label>
+
+		<label>
+			Categorie : 
+			<input type="text" id="categorie" required>
+		</label>
+
+        <label>
+			URL : 
+			<input type="url" id="url" required>
+		</label>
+
+		<br>
+		<button>Add new game</button>
+		 </fieldset>
+	</form>
+
+    <h2>Liste des jeux</h2>
+    <section>
+        <fieldset>
+            <legend>Recherche Jeu</legend>
+            <label>Nom Jeu:
+                <input id="gameSearchInput"  type="text">
+            </label>
+            <label>Ordonnée par: 
+                <select name="sortBy" id="sortBy">
+                    <option value="name_game" selected>Name</option>
+                    <option value="editeur">Editeur</option>
+                </select>
+            </label>
+        </fieldset>
+    </section>
+  <p>Click on table cells to edit</p>
+    <div id="games"></div>
+    <p><button onclick="emptyList();">Empty</button>
+        <button onclick="cm.save();">Save</button>
+        <button onclick="loadList();">Load</button>
+    </p>
+
+</body>
+</html>
